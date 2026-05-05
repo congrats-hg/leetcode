@@ -6,7 +6,6 @@ class Solution:
         ans = []
 
         for x, y in zip(x_lst, y_lst):
-            ans.append(x)
-            ans.append(y)
+            ans += [x, y]
         
         return ans
