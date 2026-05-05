@@ -4,8 +4,6 @@ class Solution:
 
         for w in words:
             w = "".join(set(w))
-
-        for w in words:
             for letter in w:
                 if letter not in allowed:
                     ans -= 1
