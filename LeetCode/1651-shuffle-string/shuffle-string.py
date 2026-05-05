@@ -1,13 +1,10 @@
 class Solution:
     def restoreString(self, s: str, indices: List[int]) -> str:
-        dic = {}
+        lst = [""]*len(s)
 
-        for idx, i in enumerate(indices):
-            dic[i] = s[idx]
+        for s_idx, idx in enumerate(indices):
+            lst[idx] = s[s_idx]
         
-        dic = dict(sorted(dic.items()))
-        ans = ""
-        for v in dic.values():
-            ans += v
-        
+        ans = "".join(lst)
+
         return ans
