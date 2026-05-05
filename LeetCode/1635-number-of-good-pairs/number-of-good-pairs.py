@@ -1,18 +1,10 @@
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
-        nums_dic = {}
-        for i, n in enumerate(nums):
-            nums_dic[i] = n
-        
+        count = {}
         ans = 0
-        for i, i_value in nums_dic.items():
-            for j, j_value in nums_dic.items():
-                if i >= j:
-                    pass
-                else:
-                    if i_value == j_value:
-                        ans += 1
-                    else:
-                        pass
+
+        for n in nums:
+            ans += count.get(n, 0)
+            count[n] = count.get(n, 0) + 1
         
         return ans
