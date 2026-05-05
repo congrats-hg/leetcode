@@ -1,11 +1,12 @@
 class Solution:
     def mostWordsFound(self, sentences: List[str]) -> int:
-        ans_lst = []
+        max_num = 0
 
         for s in sentences:
-            count = len(s.split())
-            ans_lst.append(count)
-        
-        ans = max(ans_lst)
+            num = len(s.split())
+            if num > max_num:
+                max_num = num
+
+        ans = max_num
 
         return ans
