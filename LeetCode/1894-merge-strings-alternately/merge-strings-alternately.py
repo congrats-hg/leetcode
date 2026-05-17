@@ -1,6 +1,6 @@
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
-        merged = ""
+        merged = []
 
         word1_len = len(word1)
         word2_len = len(word2)
@@ -15,8 +15,10 @@ class Solution:
             add = ""
 
         for w1, w2 in zip(word1, word2):
-            merged += w1 + w2
+            merged.append(w1)
+            merged.append(w2)
         
-        merged += add
+        merged.append(add)
+        ans = "".join(merged)
 
-        return merged
+        return ans
