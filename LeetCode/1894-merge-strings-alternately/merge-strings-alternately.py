@@ -2,11 +2,14 @@ class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
         merged = ""
 
-        if len(word1) > len(word2):
-            add_idx = len(word1) - len(word2)
+        word1_len = len(word1)
+        word2_len = len(word2)
+
+        if word1_len > word2_len:
+            add_idx = word1_len - word2_len
             add = word1[-add_idx:]
-        elif len(word1) < len(word2):
-            add_idx = len(word2) - len(word1)
+        elif word1_len < word2_len:
+            add_idx = word2_len - word1_len
             add = word2[-add_idx:]
         else:
             add = ""
